@@ -64,7 +64,7 @@ model.fit(X,Y)
 
 ### Prediction
 
-We can contrast the predictions made by the model with the ground-truth. To obtain the predictions for the training data $\textbf{X}$, we can call the \texttt{model.predict(X)} function, which results in the following matrix:
+We can contrast the predictions made by the model with the ground-truth. To obtain the predictions for the training data $\textbf{X}$, we can call the `model.predict(X)` function, which results in the following matrix:
 
 \[
 \hat{\textbf{Y}} = \begin{pmatrix}
