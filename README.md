@@ -46,7 +46,7 @@ Y = np.array([[0.35, 0.47],
               [0.33, 0.4]])                
 ```
 
-The next step consists of defining a weight matrix $W^I$ characterizing the interaction between the input variables. Ideally, this matrix should be provided by human experts during a knowledge engineering process. To develop our example, we will use an arbitrary weight matrix defined below.
+The next step consists of defining a weight matrix $W^I$ characterizing the interaction between the input variables. Ideally, this matrix should be provided by human experts during a knowledge engineering process. That is what makes this model hybrid. To develop our example, we will use an arbitrary weight matrix defined below.
 
 ```python
 # This matrix characterizes the relationships between input variables
