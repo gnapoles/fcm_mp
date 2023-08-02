@@ -55,7 +55,7 @@ Wi = np.array([[0.00, -1.00, -0.27],
                [-0.20, 0.23, 0.00]])              
 ```
 
-Now, we are ready to build the FCM model. Besides the weight matrix defining the interaction between the input variables, we can specify the number of iterations $T$ to be performed during reasoning, the nonlinearity coefficient $\phi$, and the initial slope $\lambda$ and offset $h$ of the sigmoid function.
+Now, we are ready to build the FCM model. Besides the weight matrix defining the interaction between the input variables, we can specify the number of iterations $T$ to be performed during reasoning, the nonlinearity coefficient $0 \leq \phi \leq 1$, and the initial slope $\lambda > 0$ and offset $h$ of the sigmoid function.
 
 ```python
 from fcm.FCM_MP import FCM_MP
