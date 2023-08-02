@@ -7,7 +7,7 @@ This package implements a learning method based on the Moore-Penrose inverse for
 FCP_MP can be installed from [PyPI](https://pypi.org/project/fcm_mp)
 
 <pre>
-pip install fcm_mp
+pip install fcm-mp
 </pre>
 
 ## Background
