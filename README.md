@@ -7,7 +7,7 @@ This package implements a learning method based on the Moore-Penrose inverse for
 FCP_MP can be installed from [PyPI](https://pypi.org/project/fcm_mp)
 
 <pre>
-pip install lstcn
+pip install fcm_mp
 </pre>
 
 ## Background
@@ -15,7 +15,7 @@ pip install lstcn
 The Fuzzy Cognitive Map model implemented in this package is designed for multi-output regression problems. The model is composed of two blocks. The inner block concerns the input concepts and the relationships between them. In this part, the expert is expected to define weights in the [−1, 1] interval characterizing the relationships between input concepts. The outer block concerns the relationships between input and output concepts. These relationships are not defined by the expert, but computed from the historical data using the Moore-Penrose inverse learning algorithm. Fig. 1 shows an example involving five variables where three are inputs while the others are outputs.
 
 <p align="center">
-  <img src="https://github.com/gnapoles/fcm_mp/blob/main/architecture.png?raw=true" width="600" />
+  <img src="https://github.com/gnapoles/fcm_mp/blob/main/architecture.png?raw=true" width="400" />
 </p>
 
 The weight matrix of the FCM_MP model is denoted as $W$, and it is composed of two sub-matrices $W^I$ and $W^O$. $W^I$ contains information concerning relationships ideally defined by the experts. $W^O$ collects relationships that will be learned from historical data. $W^I$ remains fixed in the learning procedure.
