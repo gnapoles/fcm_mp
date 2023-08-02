@@ -66,7 +66,7 @@ model.fit(X,Y)
 
 We can contrast the predictions made by the model with the ground-truth. To obtain the predictions for the training data $X$, we can call the `model.predict(X)` function, which results in the following matrix:
 
-$$\[
+$$
 \hat{\textbf{Y}} = \begin{pmatrix}
 0.37 & 0.47 \\
 0.36 & 0.43 \\
@@ -74,7 +74,7 @@ $$\[
 0.26 & 0.48 \\
 0.34 & 0.41 \\
 \end{pmatrix}.
-\]$$
+$$
 
 As we can see, the predictions computed by the FCM_MP model are reasonably close to the ground truth $\textbf{Y}$. If we want to quantify how the predictions differ from the ground truth, we can compute a performance metric for regression problems such as the Root Mean Square Error (RMSE), as shown below.
 
