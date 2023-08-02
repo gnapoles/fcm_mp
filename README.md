@@ -1,6 +1,6 @@
 # Fuzzy Cognitive Map with Moore-Penrose inverse learning
 
-This package implements a learning method based on the Moore-Penrose inverse for hybrid Fuzzy Cognitive Maps (FCP_MP). In this hybrid model, the user can specify how the problem features interact or let the algorithm compute that matrix from the data using unsupervised learning. The supervised learning step focuses on computing the relationships between the last hidden state of the Fuzzy Cognitive Maps and the outputs. Therefore, the model is devoted to solving multi-output regression problems where problem features are connected in non-trivial ways.
+This package implements a learning method based on the Moore-Penrose inverse for hybrid Fuzzy Cognitive Maps. In this hybrid model, the user can specify how the problem features interact or let the algorithm compute that matrix from the data using unsupervised learning. The supervised learning step focuses on computing the relationships between the last hidden state of the network and the outputs. Therefore, the model is devoted to solving multi-output regression problems where problem features are connected in non-trivial ways.
 
 ## Install
 
