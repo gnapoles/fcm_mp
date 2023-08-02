@@ -14,13 +14,13 @@ pip install fcm_mp
 
 The Fuzzy Cognitive Map model implemented in this package is designed for multi-output regression problems. 
 
-The model is composed of two blocks. The inner block concerns the input concepts and the relationships between them, and can be defined by domain experts. The outer block concerns the relationships between input and output concepts. These relationships are not defined by domain experts, but computed from the historical data using the Moore-Penrose inverse learning algorithm. Fig. 1 shows an example involving five variables where three are inputs while the others are outputs.
+The model is composed of two blocks. The inner block concerns the input concepts and the relationships between them, and it can be defined by domain experts. The outer block concerns the relationships between input and output concepts. These relationships are not defined by domain experts, but computed from the historical data using the Moore-Penrose inverse learning algorithm. Fig. 1 shows an example involving five variables where three are inputs while the others are outputs.
 
 <p align="center">
   <img src="https://github.com/gnapoles/fcm_mp/blob/main/architecture.png?raw=true" width="400" />
 </p>
 
-The weight matrix of the FCM_MP model is denoted as $W$, and it is composed of two sub-matrices $W^I$ and $W^O$. On the one hand, $W^I$ contains information concerning relationships ideally defined by domain experts. If this knowledge is not available, then $W^I$ is computed using unsuoervised learning. On the other hand, $W^O$ collects relationships that will be learned from historical data. $W^I$ remains fixed during the supervised learning procedure, which is based on the Moore-Penrose inverse.
+The weight matrix of the FCM_MP model is denoted as $W$, and it is composed of two sub-matrices $W^I$ and $W^O$. On the one hand, $W^I$ contains information concerning relationships ideally defined by domain experts. If this knowledge is not available, then $W^I$ is computed using unsupervised learning. On the other hand, $W^O$ collects relationships that will be learned from historical data. $W^I$ remains fixed during the supervised learning procedure, which is based on the Moore-Penrose inverse.
 
 ## Example Usage
 
