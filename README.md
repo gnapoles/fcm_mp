@@ -53,10 +53,13 @@ Wi = np.array([[0.00, -1.00, -0.27],
                [-0.20, 0.23, 0.00]])              
 ```
 
-For training a LSTCN model simply call the fit method:
+Now, we are ready to build the FCM model. Besides the weight matrix defining the interaction between the input variables, we can specify the number of iterations $T$ to be performed during reasoning, the nonlinearity coefficient $\phi$, and the initial slope $\lambda$ and offset $h$ of the sigmoid function.
 
 ```python
-model.fit(X_train,Y_train)
+from fcm.FCM_MP import FCM_MP
+# We first define parameters and then build the model
+model = FCM_MP(T=10, phi=0.5, slope=1.0, offset=0.0)
+model.fit(X,Y)
 ```
 
 ### Hyperparameter tuning
