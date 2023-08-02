@@ -18,7 +18,7 @@ The Fuzzy Cognitive Map model implemented in this package is designed for multi-
   <img src="https://github.com/gnapoles/fcm_mp/blob/main/architecture.png?raw=true" width="600" />
 </p>
 
-The weight matrix of the FCM_MP model is denoted as $$W$$, and it is composed of two sub-matrices $$W^I$$ and $$W^O$$. $$\W^I$$ contains information concerning relationships ideally defined by the experts. $$W^O$$ collects relationships that will be learned from historical data. $$W^I$$ remains fixed in the learning procedure.
+The weight matrix of the FCM_MP model is denoted as $W$, and it is composed of two sub-matrices $W^I$ and $W^O$. $\W^I$ contains information concerning relationships ideally defined by the experts. $W^O$ collects relationships that will be learned from historical data. $W^I$ remains fixed in the learning procedure.
 
 ## Example Usage
 
