@@ -44,10 +44,10 @@ Y = np.array([[0.35, 0.47],
               [0.33, 0.4]])                
 ```
 
-The next step consists of defining a weight matrix $\textbf{W}^I$ characterizing the interaction between the input variables. Ideally, this matrix should be provided by human experts during a knowledge engineering process. To develop our example, we will use an arbitrary weight matrix defined below.
+The next step consists of defining a weight matrix $W^I$ characterizing the interaction between the input variables. Ideally, this matrix should be provided by human experts during a knowledge engineering process. To develop our example, we will use an arbitrary weight matrix defined below.
 
 ```python
-# It characterizes the relationships between input variables
+# This matrix characterizes the relationships between input variables
 Wi = np.array([[0.00, -1.00, -0.27],
                [-0.50, 0.00, 0.15],
                [-0.20, 0.23, 0.00]])              
