@@ -62,39 +62,27 @@ model = FCM_MP(T=10, phi=0.5, slope=1.0, offset=0.0)
 model.fit(X,Y)
 ```
 
-### Hyperparameter tuning
-
-Use walk forward cross-validation and grid search (or any other suitable validation strategy from scikit-learn) for selecting the best-performing model:
-
-```python
-tscv = TimeSeriesSplit(n_splits=5)
-scorer = make_scorer(model.score, greater_is_better=False)
-param_search = {
-    'alpha': [1.0E-3, 1.0E-2, 1.0E-1],
-    'n_blocks': range(2, 6)
-}
-
-gsearch = GridSearchCV(estimator=model, cv=tscv, param_grid=param_search, refit=True,
-                       n_jobs=-1, error_score='raise', scoring=scorer)
-gsearch.fit(X_train, Y_train)
-best_model = gsearch.best_estimator_
-```
-
 ### Prediction
 
-For predicting new data use the method predict:
+We can contrast the predictions made by the model with the ground-truth. To obtain the predictions for the training data $\textbf{X}$, we can call the \texttt{model.predict(X)} function, which results in the following matrix:
+
+\[
+\hat{\textbf{Y}} = \begin{pmatrix}
+0.37 & 0.47 \\
+0.36 & 0.43 \\
+0.41 & 0.49 \\
+0.26 & 0.48 \\
+0.34 & 0.41 \\
+\end{pmatrix}.
+\]
+
+As we can see, the predictions computed by the FCM_MP model are reasonably close to the ground truth $\textbf{Y}$. If we want to quantify how the predictions differ from the ground truth, we can compute a performance metric for regression problems such as the Root Mean Square Error (RMSE), as shown below.
 
 ```python
-Y_pred = best_model.predict(X_test)
+rmse = np.sqrt(np.mean((Y-Y_hat)**2))
+print(np.round(rmse, 4))
+# RMSE=0.0088
 ```
-
-The figure below shows the predictions on the test set for the target series `oil temperature` of the `ETTh1` dataset [5] containing 17420 records of electricity transformer temperatures in China:
-
-<p align="center">
-  <img src="https://github.com/gnapoles/lstcn/blob/main/figures/example_pred.png?raw=true" width="1400" />
-</p>
-
-In this example, we used 80% of the dataset for training and validation, and 20% for testing. The mean absolute error for the training set is 0.0355, while the test error is 0.0192. More importantly, the model's hyperparameter tuning (exploring 15 models) runs in 3.8599 seconds!
 
 ## References
 
