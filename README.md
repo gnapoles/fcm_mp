@@ -86,16 +86,16 @@ print(np.round(rmse, 4))
 
 ## References
 
-If you use the LSTCN model in your research please cite the following papers:
+If you use the FCM_MP model in your research please cite the following paper:
 
 ```
 @article{NAPOLES2020258,
-title = {Deterministic learning of hybrid Fuzzy Cognitive Maps and network reduction approaches},
-journal = {Neural Networks},
-volume = {124},
-pages = {258-268},
-year = {2020},
-doi = {https://doi.org/10.1016/j.neunet.2020.01.019},
-author = {Gonzalo Nápoles and Agnieszka Jastrzębska and Carlos Mosquera and Koen Vanhoof and Władysław Homenda}
+  title = {Deterministic learning of hybrid Fuzzy Cognitive Maps and network reduction approaches},
+  journal = {Neural Networks},
+  volume = {124},
+  pages = {258-268},
+  year = {2020},
+  doi = {https://doi.org/10.1016/j.neunet.2020.01.019},
+  author = {Gonzalo Nápoles and Agnieszka Jastrzębska and Carlos Mosquera and Koen Vanhoof and Władysław Homenda}
 }
 ```
