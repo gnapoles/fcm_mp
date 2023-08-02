@@ -26,13 +26,32 @@ The syntax for the usage of FCM_MP is compatible with scikit-learn library.
 
 ### Training
 
-First create an LSTCN object specifying the number of features and the number of steps to predict ahead:
+Let's assume that we want to solve a decision-making problem involving three input variables ($x_1$, $x_2$ and $x_3$), two output variables ($y_1$ and $y_2$) and five problem instances.
 
 ```python
-model = LSTCN(n_features, n_steps)
+# This matrix contains the data concerning the input variables
+X = np.array([[0.37, 0.95, 0.73],
+              [0.60, 0.16, 0.16],
+              [0.06, 0.87, 0.60],
+              [0.71, 0.02, 0.97],
+              [0.83, 0.21, 0.18]])
+
+# This matrix contains the data concerning the output variables
+Y = np.array([[0.35, 0.47],
+              [0.37, 0.43],
+              [0.42, 0.50],
+              [0.26, 0.48],
+              [0.33, 0.4]])                
 ```
 
-Optionally, you can also specify the number of STCN blocks in the network (`n_blocks`), the activation function (`function`), the regression solver (`solver`) and the regularization penalization parameter (`alpha`). For more details, check the documentation of the LSTCN class.
+The next step consists of defining a weight matrix $\textbf{W}^I$ characterizing the interaction between the input variables. Ideally, this matrix should be provided by human experts during a knowledge engineering process. To develop our example, we will use an arbitrary weight matrix defined below.
+
+```python
+# It characterizes the relationships between input variables
+Wi = np.array([[0.00, -1.00, -0.27],
+               [-0.50, 0.00, 0.15],
+               [-0.20, 0.23, 0.00]])              
+```
 
 For training a LSTCN model simply call the fit method:
 
