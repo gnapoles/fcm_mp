@@ -12,7 +12,7 @@ pip install fcm_mp
 
 ## Background
 
-The Fuzzy Cognitive Map model implemented in this package is designed for multi-output regression problems. The model is composed of two blocks. The inner block concerns the input concepts and the relationships between them. In this part, the expert is expected to define weights in the [−1, 1] interval characterizing the relationships between input concepts. The outer block concerns the relationships between input and output concepts. These relationships are not defined by the expert, but computed from the historical data using the Moore-Penrose inverse learning algorithm. Fig. 1 shows an example involving five variables where three are inputs while the others are outputs.
+The Fuzzy Cognitive Map model implemented in this package is designed for multi-output regression problems. The model is composed of two blocks. The inner block concerns the input concepts and the relationships between them. Experts can define weights in the [−1, 1] interval characterizing the relationships between input concepts. The outer block concerns the relationships between input and output concepts. These relationships are not defined by the expert, but computed from the historical data using the Moore-Penrose inverse learning algorithm. Fig. 1 shows an example involving five variables where three are inputs while the others are outputs.
 
 <p align="center">
   <img src="https://github.com/gnapoles/fcm_mp/blob/main/architecture.png?raw=true" width="400" />
